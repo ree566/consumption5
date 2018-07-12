@@ -1,0 +1,15 @@
+{
+  "name": "angular-ezdialog",
+  "homepage": "https://github.com/eight04/angular-ezdialog",
+  "version": "1.0.4",
+  "_release": "1.0.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.4",
+    "commit": "7386fc69fb2bf52cf39e3c90cc5aaa5b9b1e35a1"
+  },
+  "_source": "git://github.com/eight04/angular-ezdialog.git",
+  "_target": "~1.0.4",
+  "_originalSource": "angular-ezdialog",
+  "_direct": true
+}

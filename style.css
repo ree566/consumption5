@@ -1,0 +1,275 @@
+﻿body{
+	font-family: Arial, "微軟正黑體", sans-serif;
+	position: relative;
+}
+
+#title{
+	text-align: center;
+	margin: 40px 0 0;
+}
+
+.navbar-brand{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	z-index: -1;
+	margin-left: 0!important;
+	margin-right: 0;
+	top: 0;
+	left: 0;
+}
+
+.tab-pane{
+	padding: 1px 0 0;
+	margin-top: -1px 0 0;
+}
+
+.next::after{
+	content: "\21D3";
+}
+
+.prev::after{
+	content: "\21D1";
+}
+
+.next:after{
+	content: "\21D3";
+}
+
+.prev:after{
+	content: "\21D1";
+}
+
+@media (min-width: 768px){
+	.select-group select{
+		min-height: 350px;
+	}
+
+	.prev::after{
+		content: "\AB";
+	}
+	
+	.next::after{
+		content: "\BB";
+	}
+	
+	.prev:after{
+		content: "\AB";
+	}
+	
+	.next:after{
+		content: "\BB";
+	}
+	
+}
+
+.select-group .panel{
+	margin: 0;
+}
+
+.page-order .main{
+	max-width: none;
+}
+
+.page-order .submit::after{
+	content: "儲存";
+}
+
+.page-view .submit::after{
+	content: "修改";
+}
+
+/* ie suck */
+.page-order .submit:after{
+	content: "儲存";
+}
+
+.page-view .submit:after{
+	content: "修改";
+}
+
+.null::after{
+	content: ""!important;
+}
+
+.page-order .submit.null:after{
+	content: "";
+}
+
+.orders-wrap, .group-list-wrap{
+	position: relative;
+	transition: top 0.5s;
+	z-index: 1;
+}
+
+.btn-text{
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+@media (min-width: 992px){
+	.group-list-wrap{
+		overflow: hidden;
+		position: relative;
+	}
+
+	.group-list-wrap:hover{
+		overflow-y: scroll;
+		margin-right: -17px;
+	}
+}
+
+.unnode{
+	visibility: hidden;
+}
+
+.table > tbody > tr > td{
+	vertical-align: middle;
+}
+
+.item-list .bg-warning {
+	color: black;
+	background-color: yellow;
+}
+
+.item-list .bg-danger {
+	color: white;
+	background-color: red;
+}
+
+.nav a, .pagination, .carousel, .panel-title a {
+	cursor: pointer; 
+}
+
+.row .control-label{
+	padding-top: 7px;
+}
+
+.login h1{
+	text-align: center;
+}
+
+.table-responsive{
+    overflow-x: auto;
+	overflow-y: hidden;
+	margin-bottom: 15px;
+	width: 100%;
+	border: 1px solid #ddd;
+}
+
+.table-responsive > .table > tbody > tr > td, 
+.table-responsive > .table > thead > tr > th {
+	white-space: nowrap;
+}
+
+.table-responsive > .table{
+    margin-bottom: 0;
+}
+
+.chart {
+	margin-top: 35px;
+}
+
+@media (min-width: 768px) {
+	.vcenter, .vcenter.collapse.in{
+		display: inline-block;
+		vertical-align: middle;
+		float: none;
+	}
+	
+	.collapse {
+		display: none;
+	}
+}
+
+.line-legend, .pie-legend, .bar-legend {
+	list-style: none;
+}
+
+.line-legend span, .pie-legend span, .bar-legend span {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.line-legend .dist, .pie-legend .dist, .bar-legend .dist {
+	width: 1em;
+	height: 1em;
+	border-radius: 0.5em;
+	margin-right: 8px;
+}
+
+.pre-wrap {
+	white-space: pre-wrap;
+}
+
+.login-block {
+	max-width: 320px;
+	margin: 0 auto;
+}
+
+.selection:hover {
+	background-color: #DFF0D8;
+	cursor: pointer;
+}
+
+/* set reference point */
+.tab-animation > .tab-content {
+    position: relative;
+}
+
+/* set animate effect */
+.tab-animation > .tab-content > .tab-pane{
+    transition: 0.2s linear opacity;
+}
+
+/* overwrite display: none and remove from document flow */
+.tab-animation > .tab-content > .tab-pane.active-remove {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: block;
+}
+
+/* opacity=0 when removing "active" class */
+.tab-animation > .tab-content > .tab-pane.active-remove-active {
+    opacity: 0;
+}
+
+/* opacity=0 when adding "active" class */
+.tab-animation > .tab-content > .tab-pane.active-add {
+    opacity: 0;
+}
+
+p:first-child {
+	margin-top: 10px;
+}
+
+.modal-body .form-group:last-child{
+	margin-bottom: 0;
+}
+
+.clickable {
+	text-decoration: underline;
+}
+
+@media (min-width: 768px){
+	.row > .table {
+		display: table;
+		max-width: none;
+		margin-bottom: 0;
+	}
+	
+	.row > .table > [class*="col-"] {
+		display: table-cell;
+		float: none;
+	}
+}
+
+.text-bottom {
+	vertical-align: bottom;
+}
+
+.text-middle {
+	vertical-align: middle;
+}
+

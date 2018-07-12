@@ -1,0 +1,165 @@
+<!DOCTYPE  html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <title>doc</title>
+    <style>
+      /*github.com style (c) Vasily Polovnyov <vast@whiteants.net>*/
+      pre code {
+        display: block; padding: 0.5em;
+        color: #333;
+        background: #f8f8ff
+      }
+      pre .comment,
+      pre .template_comment,
+      pre .diff .header,
+      pre .javadoc {
+        color: #998;
+        font-style: italic
+      }
+      pre .keyword,
+      pre .css .rule .keyword,
+      pre .winutils,
+      pre .javascript .title,
+      pre .nginx .title,
+      pre .subst,
+      pre .request,
+      pre .status {
+        color: #333;
+        font-weight: bold
+      }
+      pre .number,
+      pre .hexcolor,
+      pre .ruby .constant {
+        color: #099;
+      }
+      pre .string,
+      pre .tag .value,
+      pre .phpdoc,
+      pre .tex .formula {
+        color: #d14
+      }
+      pre .title,
+      pre .id {
+        color: #900;
+        font-weight: bold
+      }
+      pre .javascript .title,
+      pre .lisp .title,
+      pre .clojure .title,
+      pre .subst {
+        font-weight: normal
+      }
+      pre .class .title,
+      pre .haskell .type,
+      pre .vhdl .literal,
+      pre .tex .command {
+        color: #458;
+        font-weight: bold
+      }
+      pre .tag,
+      pre .tag .title,
+      pre .rules .property,
+      pre .django .tag .keyword {
+        color: #000080;
+        font-weight: normal
+      }
+      pre .attribute,
+      pre .variable,
+      pre .lisp .body {
+        color: #008080
+      }
+      pre .regexp {
+        color: #009926
+      }
+      pre .class {
+        color: #458;
+        font-weight: bold
+      }
+      pre .symbol,
+      pre .ruby .symbol .string,
+      pre .lisp .keyword,
+      pre .tex .special,
+      pre .prompt {
+        color: #990073
+      }
+      pre .built_in,
+      pre .lisp .title,
+      pre .clojure .built_in {
+        color: #0086b3
+      }
+      pre .preprocessor,
+      pre .pi,
+      pre .doctype,
+      pre .shebang,
+      pre .cdata {
+        color: #999;
+        font-weight: bold
+      }
+      pre .deletion {
+        background: #fdd
+      }
+      pre .addition {
+        background: #dfd
+      }
+      pre .diff .change {
+        background: #0086b3
+      }
+      pre .chunk {
+        color: #aaa
+      }
+    </style>
+  </head>
+  <body>  
+    <h1 id="-">耗材統一管理系統 - 使用手冊</h1>
+<p>使用 Firefox, Google Chrome 或 IE10 以上的瀏覽器以支援完整功能。</p>
+<h2 id="-login">登入 - login</h2>
+<p>預設密碼與工號相同，點右上角「修改密碼」可以改密碼。</p>
+<h2 id="-report">報表 - report</h2>
+<p><img src="images/report.png" alt="Report"></p>
+<p>使用搜尋功能查詢領出紀錄，並且會在上方自動產生圖表。</p>
+<h3 id="-">圖表選項</h3>
+<ul>
+<li>圖表類型 - 長條圖或線圖，左方的圓餅圖是長駐的。</li>
+<li>日期 - 以日統計或以月統計。</li>
+<li>Group - 以物品分類或以部門分類。</li>
+</ul>
+<h3 id="-">查詢選項</h3>
+<ul>
+<li>物品名稱 - 查詢某種物品的消耗量</li>
+<li>部門名稱 - 查詢特定部門的消耗量</li>
+<li>起始日期、結束日期 - 查詢特定日期內的消耗量。預設為當月份的 1 號至 31 號</li>
+</ul>
+<h2 id="-order">領取耗材 - order</h2>
+<p><img src="images/order.png" alt="Order"></p>
+<ul>
+<li>在耗材需求欄位可以輸入料號、名稱、規格……以查詢物品。</li>
+<li>查詢結果的物品列表可以用方向鍵上、下來選擇，或者使用滑鼠點擊選擇物品。</li>
+<li>接著在右方輸入數量，按下發送並確認後即完成申請的動作。</li>
+</ul>
+<h2 id="-repository">管理庫存 - repository</h2>
+<h3 id="-">耗材清單</h3>
+<p><img src="images/repo-list.png" alt="Repository item list"></p>
+<p>在耗材清單分頁，可以新增與編輯各項物品的料號、名稱、規格、單位……包括安全庫存等等。</p>
+<p>目前只能單筆輸入，還未有大量匯入的功能。因為我不清楚平時是如何管理耗材清單的，還麻煩提供建議。</p>
+<h3 id="-">管理儲存庫</h3>
+<p><img src="images/repo-repo.png" alt="Repository control"></p>
+<h4 id="-">未核可申請</h4>
+<p>顯示領料申請。若無申請時列表會隱藏。點擊申請右方的「核可」按鈕並確認後，物品數量就會自動從儲存庫裡扣除。當然，若申請數量大於庫存數量是無法核可的。</p>
+<h4 id="-">庫存資訊</h4>
+<p>顯示所有物品的庫存量，並且會顯示剩餘比例。剩餘比例算法為 <code>(數量 - 安全水位) / 安全水位</code>。若剩餘比例低於 20%，表格會呈現黃色；若低於 0%，表格會呈現紅色，表示庫存量低於安全水位。</p>
+<p>庫存進貨時，點擊右方的「進貨」按鈕，可以增加庫存數量，並且把進貨記錄寫入資料庫。</p>
+<p>要尋找特定物品的資訊，可以在文字欄搜尋。</p>
+<h2 id="-control">管理 - Control</h2>
+<p>目前管理頁面只有總管理員能使用。</p>
+<h3 id="-">管理使用者</h3>
+<p>要新增使用者，可以直接輸入工號，按新增，設定姓名、部門、權限。</p>
+<p>或是以多行文字匯入，請參見頁面上的說明。</p>
+<h3 id="-">管理部門</h3>
+<p>部門的功用︰產生圖表時可以用部門分類，並且領耗材人員可以看到同部門的領耗材紀錄。</p>
+<p>基本上部門只是一個名稱以供辨識，在匯入使用者時也會檢查部門名稱是否存在。</p>
+<p>GLOBAL 為預設的部門，請不要刪除。</p>
+
+  </body>
+</html>
