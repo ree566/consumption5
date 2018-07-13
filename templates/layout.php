@@ -64,6 +64,8 @@
 	<?=$BODY?>
 </section>
 
+<?php //include 'debug-footer.php';?>
+
 <footer class="container-fluid text-right">	
 	&copy; 2014-<?php echo date("Y");?> Advantech.com.tw<br>
 </footer>
