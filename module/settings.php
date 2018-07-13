@@ -3,7 +3,7 @@
 define("NS", "CONSUMPTION");
 
 // mysql settings
-define("DB_SERV", 'localhost');
+define("DB_SERV", '172.20.131.52');
 define("DB_NAME", 'consumption5');
 define("DB_USER", 'consumption5');
 define("DB_PASS", 'WaMXEYDG8hwKSZuZ');
