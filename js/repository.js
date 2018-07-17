@@ -17,6 +17,9 @@ repositoryApp.controller("RepositoryPage", ["$scope", "$http", "ezdialog", "$fil
         myHttp($http, null, json, success, fail);
     }
 
+    /*
+    * Test
+    * */
     var ws = wsConnect({
         url: "ws://" + location.host + window.WS_PATH,
         open: function () {
