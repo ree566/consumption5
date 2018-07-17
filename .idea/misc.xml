@@ -4,17 +4,17 @@
     <session id="1229861073">
       <usages-collector id="statistics.php.composer.actions">
         <counts>
-          <entry key="addDependencyDialog_from_MainMenu" value="3" />
+          <entry key="addDependencyDialog_from_MainMenu" value="5" />
           <entry key="init_from_MainMenu" value="1" />
           <entry key="install_from_MainMenu" value="1" />
-          <entry key="remove_from_AddDependencyDialog" value="8" />
-          <entry key="require_from_AddDependencyDialog" value="2" />
+          <entry key="remove_from_AddDependencyDialog" value="9" />
+          <entry key="require_from_AddDependencyDialog" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.composer.command.options">
         <counts>
-          <entry key="remove_with_--ansi_--no-interaction_--no-progress.default" value="8" />
-          <entry key="require_with_--ansi_--no-interaction_--no-progress.default" value="2" />
+          <entry key="remove_with_--ansi_--no-interaction_--no-progress.default" value="9" />
+          <entry key="require_with_--ansi_--no-interaction_--no-progress.default" value="3" />
         </counts>
       </usages-collector>
     </session>
