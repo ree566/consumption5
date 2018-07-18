@@ -9,6 +9,11 @@
       "email": "email@example.com"
     }
   ],
+  "autoload": {
+    "psr-0": {
+      "MyApp": "src"
+    }
+  },
   "require": {
     "cboden/ratchet": "v0.4.1"
   }

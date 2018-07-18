@@ -61,9 +61,12 @@ var orderApp = angular.module("App", ["ui.bootstrap", "ezdialog"])
 				this.send(json);
 			},
 			message: function(msg){
-				if (msg == "update-order") {
-					updateOrder();
-				}
+                console.log(msg);
+                var receive = JSON.parse(msg);
+                if (receive.hasOwnProperty('command') && receive.command == "update-order") {
+                    console.log("update order...");
+                    updateOrder();
+                }
 			}
 		});
 

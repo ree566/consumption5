@@ -9,7 +9,7 @@ define("DB_USER", 'consumption5');
 define("DB_PASS", 'WaMXEYDG8hwKSZuZ');
 
 // websocket settings
-define("WS_PATH", '/consumption5/ws/');
+define("WS_PATH", ':8080/consumption5/');
 define("WS_PORT", 8137);
 
 // other settings

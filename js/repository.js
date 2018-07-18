@@ -35,7 +35,10 @@ repositoryApp.controller("RepositoryPage", ["$scope", "$http", "ezdialog", "$fil
             this.send(json);
         },
         message: function (msg) {
-            if (msg == "update-order") {
+            console.log(msg);
+            var receive = JSON.parse(msg);
+            if (receive.hasOwnProperty('command') && receive.command == "update-order") {
+                console.log("update order...");
                 updateOrder();
             }
         }
