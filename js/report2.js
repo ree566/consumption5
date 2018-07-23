@@ -27,12 +27,57 @@ repositoryApp.controller("report2", ["$scope", "$http", "$location", "ezdialog",
             time_end: getDate($scope.input.timeEnd) + " 23:59:59"
         };
 
+        var sD = moment(json.time_start);
+        var eD = moment(json.time_end);
+
+        if(Math.abs(sD.diff(eD, 'days')) > 30){
+            alert("日期區間請設定在一個月內");
+            return false;
+        }
+
         if (json.floor == null) {
             json.floor = -1;
         }
 
         function success(json) {
             $scope.data.orderList = json.data;
+
+            $('#table1').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'excel', 'print'
+                ],
+                data: json.data,
+                "columns": [
+                    {"data": "id"},
+                    {"data": "user_id"},
+                    {"data": "user_name"},
+                    {"data": "team_name"},
+                    {"data": "item_name"},
+                    {"data": "number", width: "100px"},
+                    {"data": "order_time"},
+                    {"data": "checkout_time"},
+                    {"data": "floor_name"}
+                ],
+                "columnDefs": [
+                    {
+                        "type": "html",
+                        "targets": [5],
+                        'render': function (data, type, full, meta) {
+                            return "<h5 class='" + (data > 0 ? "order-out" : "order-in") + "'>" +
+                                "<span class='glyphicon glyphicon-chevron-" + (data > 0 ? "down" : "up") + "'>" +
+                                (Math.abs(data) + full["dimension"]) +
+                                "</span>" +
+                                "</h5>";
+                        }
+                    }
+                ],
+                destroy: true,
+                resize: false,
+                paging: false,
+                searching: false,
+                processing: true
+            });
         }
 
         function fail(json) {

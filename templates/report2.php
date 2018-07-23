@@ -1,3 +1,5 @@
+
+<?php include 'datatable.php';?>
 <style>
     .order-in {
         color: green;
@@ -7,7 +9,6 @@
         color: red;
     }
 </style>
-
 <script>
     <?php
     $l = json_en(get_floor_all());
@@ -52,37 +53,20 @@
     <div class="row">
         <div class="orders">
             <table id="table1" class="table table-striped">
+                <thead>
                 <tr>
                     <th>id</th>
-                    <th>uid</th>
-                    <th>uName</th>
-                    <th>tName</th>
-                    <th>iName</th>
-                    <th>num</th>
-                    <th>otime</th>
-                    <th>ctime</th>
-                    <th>fName</th>
+                    <th>工號</th>
+                    <th>姓名</th>
+                    <th>單位</th>
+                    <th>品名</th>
+                    <th>數量＆單位</th>
+                    <th>訂購日期</th>
+                    <th>處理日期</th>
+                    <th>樓層</th>
                 </tr>
-                <tr ng-repeat="order in data.orderList = (data.orderList | orderBy:'id')">
-                    <td>{{order.id}}</td>
-                    <td>{{order.user_id}}</td>
-                    <td>{{order.user_name}}</td>
-                    <td>{{order.team_name}}</td>
-                    <td>{{order.item_name}}</td>
-                    <td ng-class="{'order-out': order.number > 0, 'order-in': order.number < 0}">
-                        <span ng-class="{'glyphicon glyphicon-chevron-down': order.number > 0, 'glyphicon glyphicon-chevron-up': order.number < 0}"></span>
-                        {{(order.number | makePositive) + order["dimension"]}}
-                    </td>
-                    <td>{{order.order_time}}</td>
-                    <td>{{order.checkout_time}}</td>
-                    <td>{{order.floor_name}}</td>
-                </tr>
+                </thead>
             </table>
         </div>
     </div>
-</div>
-<div ng-controller="excelController">
-    <button class="btn btn-link" ng-click="exportToExcel('#table1')">
-        <span class="glyphicon glyphicon-share"></span> Export to Excel
-    </button>
 </div>

@@ -16,7 +16,9 @@ if (USE_CDN) {
 } else { 
 ?>
 	<!-- js libs -->
-	<script src="lib/angular/angular.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+
+    <script src="lib/angular/angular.js"></script>
 	<script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 	<script src="lib/chartjs/Chart.js"></script>
 	<script src="lib/angles/angles.js"></script>
@@ -30,5 +32,6 @@ if (USE_CDN) {
 	<!-- ezdialog -->
 	<script src="lib/angular-ezdialog/dialog.js"></script>
 	<link rel="stylesheet" href="lib/angular-ezdialog/dialog.css">
+
 <?php
 }
