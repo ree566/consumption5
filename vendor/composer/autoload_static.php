@@ -36,6 +36,10 @@ class ComposerStaticInitd4b60cd3cc9b42e95059b2ada48bcd18
         array (
             'Psr\\Http\\Message\\' => 17,
         ),
+        'M' => 
+        array (
+            'MyApp\\' => 6,
+        ),
         'G' => 
         array (
             'GuzzleHttp\\Psr7\\' => 16,
@@ -95,6 +99,10 @@ class ComposerStaticInitd4b60cd3cc9b42e95059b2ada48bcd18
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
+        'MyApp\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/MyApp',
+        ),
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
@@ -102,13 +110,6 @@ class ComposerStaticInitd4b60cd3cc9b42e95059b2ada48bcd18
     );
 
     public static $prefixesPsr0 = array (
-        'M' => 
-        array (
-            'MyApp' => 
-            array (
-                0 => __DIR__ . '/../..' . '/src',
-            ),
-        ),
         'E' => 
         array (
             'Evenement' => 

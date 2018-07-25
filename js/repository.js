@@ -21,7 +21,7 @@ repositoryApp.controller("RepositoryPage", ["$scope", "$http", "ezdialog", "$fil
     * Test
     * */
     var ws = wsConnect({
-        url: "ws://" + location.host + window.WS_PATH,
+        url: "ws://" + location.host + ":" + window.WS_PORT + window.WS_PATH,
         open: function () {
             // console.log("onopen");
             var sessid = document.cookie.match(/PHPSESSID=([^;]*)/)[1];

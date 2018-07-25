@@ -1,5 +1,9 @@
 <script>
-<?php 
+
+<?php
+
+include 'datatable.php';
+
 $itemList = json_en(get_item_floor($SESS["floor_id"]));
 echo "var itemList = $itemList;";
 

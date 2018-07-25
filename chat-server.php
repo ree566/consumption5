@@ -5,6 +5,7 @@ use Ratchet\WebSocket\WsServer;
 use MyApp\Chat;
 
 require 'vendor/autoload.php';
+require_once 'module/autoload.php';
 
 $server = IoServer::factory(
     new HttpServer(
@@ -12,7 +13,7 @@ $server = IoServer::factory(
             new Chat()
         )
     ),
-    8080
+    WS_PORT
 );
 
 $server->run();

@@ -1,6 +1,7 @@
 <?php
 
 namespace MyApp;
+
 use Ratchet\MessageComponentInterface;
 use Ratchet\ConnectionInterface;
 
@@ -16,6 +17,8 @@ class Chat implements MessageComponentInterface
     public function onOpen(ConnectionInterface $conn)
     {
         // Store the new connection to send messages to later
+        $this -> logIt("NEW", $conn);
+
         $this->clients->attach($conn);
 
         echo "New connection! ({$conn->resourceId})\n";
@@ -48,5 +51,13 @@ class Chat implements MessageComponentInterface
         echo "An error has occurred: {$e->getMessage()}\n";
 
         $conn->close();
+    }
+
+    function logIt($type, $con = null, $value = null)
+    {
+        $time = date("H:i:s");
+        $name = @$con->session["name"];
+        $id = @$con->resourceId;
+        printf("[%s] %5s :: %4d :: %s :: %s\n", $time, $type, $id, $name, $value);
     }
 }

@@ -48,7 +48,7 @@ var orderApp = angular.module("App", ["ui.bootstrap", "ezdialog"])
 		}
 
 		var ws = wsConnect({
-			url: "ws://" + location.host + window.WS_PATH,
+            url: "ws://" + location.host + ":" + window.WS_PORT + window.WS_PATH,
 			open: function(){
 				var sessid = document.cookie.match(/PHPSESSID=([^;]*)/)[1];
 				var json = {
