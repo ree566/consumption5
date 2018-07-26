@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Evenement' => array($vendorDir . '/evenement/evenement/src'),
+    'Doctrine\\Common\\Collections\\' => array($vendorDir . '/doctrine/collections/lib'),
 );

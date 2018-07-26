@@ -7,6 +7,8 @@
 $to ="Wei.Cheng@advantech.com.tw"; //收件者
 $subject = "test"; //信件標題
 $msg = "smtp發信測試";//信件內容
+$headers='MIME-Version: 1.0'."\r\n";
+$headers.='Content-type: text/html; charset=UTF-8'."\r\n"; //設定為html郵件
 $headers = "From: admin@your.com"; //寄件者
 
 if(mail("$to", "$subject", "$msg", "$headers")):

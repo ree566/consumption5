@@ -19,9 +19,13 @@ class ComposerStaticInitd4b60cd3cc9b42e95059b2ada48bcd18
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Component\\Routing\\' => 26,
             'Symfony\\Component\\HttpFoundation\\' => 33,
+            'Scheduler\\' => 10,
+            'SchedulerTests\\' => 15,
         ),
         'R' => 
         array (
+            'Recurr\\Test\\' => 12,
+            'Recurr\\' => 7,
             'React\\Stream\\' => 13,
             'React\\Socket\\' => 13,
             'React\\Promise\\Timer\\' => 20,
@@ -44,6 +48,10 @@ class ComposerStaticInitd4b60cd3cc9b42e95059b2ada48bcd18
         array (
             'GuzzleHttp\\Psr7\\' => 16,
         ),
+        'C' => 
+        array (
+            'Cron\\' => 5,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -58,6 +66,22 @@ class ComposerStaticInitd4b60cd3cc9b42e95059b2ada48bcd18
         'Symfony\\Component\\HttpFoundation\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/http-foundation',
+        ),
+        'Scheduler\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hutnikau/job-scheduler/src',
+        ),
+        'SchedulerTests\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hutnikau/job-scheduler/tests',
+        ),
+        'Recurr\\Test\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/simshaun/recurr/tests',
+        ),
+        'Recurr\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/simshaun/recurr/src/Recurr',
         ),
         'React\\Stream\\' => 
         array (
@@ -107,6 +131,10 @@ class ComposerStaticInitd4b60cd3cc9b42e95059b2ada48bcd18
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
         ),
+        'Cron\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -115,6 +143,13 @@ class ComposerStaticInitd4b60cd3cc9b42e95059b2ada48bcd18
             'Evenement' => 
             array (
                 0 => __DIR__ . '/..' . '/evenement/evenement/src',
+            ),
+        ),
+        'D' => 
+        array (
+            'Doctrine\\Common\\Collections\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/doctrine/collections/lib',
             ),
         ),
     );

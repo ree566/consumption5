@@ -42,6 +42,7 @@ repositoryApp.controller("report2", ["$scope", "$http", "$location", "ezdialog",
         function success(json) {
             $scope.data.orderList = json.data;
 
+            // Datatable init here because init before button click can't export excel.
             $('#table1').DataTable({
                 dom: 'Bfrtip',
                 buttons: [

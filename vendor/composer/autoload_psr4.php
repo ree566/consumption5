@@ -9,6 +9,10 @@ return array(
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Component\\Routing\\' => array($vendorDir . '/symfony/routing'),
     'Symfony\\Component\\HttpFoundation\\' => array($vendorDir . '/symfony/http-foundation'),
+    'Scheduler\\' => array($vendorDir . '/hutnikau/job-scheduler/src'),
+    'SchedulerTests\\' => array($vendorDir . '/hutnikau/job-scheduler/tests'),
+    'Recurr\\Test\\' => array($vendorDir . '/simshaun/recurr/tests'),
+    'Recurr\\' => array($vendorDir . '/simshaun/recurr/src/Recurr'),
     'React\\Stream\\' => array($vendorDir . '/react/stream/src'),
     'React\\Socket\\' => array($vendorDir . '/react/socket/src'),
     'React\\Promise\\Timer\\' => array($vendorDir . '/react/promise-timer/src'),
@@ -21,4 +25,5 @@ return array(
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
     'MyApp\\' => array($baseDir . '/src/MyApp'),
     'GuzzleHttp\\Psr7\\' => array($vendorDir . '/guzzlehttp/psr7/src'),
+    'Cron\\' => array($vendorDir . '/mtdowling/cron-expression/src/Cron'),
 );

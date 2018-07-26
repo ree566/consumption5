@@ -124,7 +124,7 @@ function get_item_all()
 
 function get_item_floor($floor_id)
 {
-    return get_rows("SELECT * FROM items WHERE floor_id = $floor_id");
+    return get_rows("SELECT * FROM items WHERE isGeneric = 1 OR floor_id = $floor_id");
 }
 
 function get_team($team_id)
@@ -218,7 +218,7 @@ function get_order_floor_new($floor_id)
 			orders.team_id = teams.id && 
 			orders.user_id = users.id && 
 			orders.checkout_time = 0 &&
-			items.floor_id = $floor_id"
+			(items.isGeneric = 1 || items.floor_id = $floor_id)"
     );
 }
 
@@ -370,11 +370,13 @@ function delete_item($item_id)
 
 function checkout_order($order_id)
 {
+    global $SESS;
     Q(
         "UPDATE
 			orders
 		SET
-			checkout_time = NOW()
+			checkout_time = NOW(),
+			checkout_user_id = '{$SESS["uid"]}'
 		WHERE
 			orders.id = $order_id"
     );
@@ -391,11 +393,13 @@ function checkout_order($order_id)
 
 function reject_order($order_id)
 {
+    global $SESS;
     Q(
         "UPDATE
 			orders
 		SET
-			checkout_time = NOW(),
+			checkout_time = NOW(), 
+			checkout_user_id = '{$SESS["uid"]}',
 			reject = 1
 		WHERE
 			id = $order_id"

@@ -15,6 +15,7 @@
     }
   },
   "require": {
-    "cboden/ratchet": "v0.4.1"
+    "cboden/ratchet": "v0.4.1",
+    "hutnikau/job-scheduler": "^0.4.1"
   }
 }
