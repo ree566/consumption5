@@ -136,6 +136,7 @@
                         <th>單位</th>
                         <th>MOQ</th>
                         <th>安全庫存</th>
+                        <th>通用</th>
                         <th>備註</th>
                         <th>#</th>
                     </tr>
@@ -150,6 +151,7 @@
                         <td>{{item.dimension}}</td>
                         <td>{{item.moq}}</td>
                         <td>{{item.low_floor}}</td>
+                        <td>{{item.isGeneric == 1 ? 'Y' : 'N'}}</td>
                         <td>{{item.comment}}</td>
                         <td>
                             <button class="btn btn-primary" ng-click="editItem(item)">修改</button>
@@ -286,6 +288,11 @@
             <label for="low-floor">安全庫存</label>
             <input type="number" class="form-control form-lg" ng-model="param.low_floor" id="low-floor"
                    placeholder="輸入安全水位">
+        </div>
+        <div class="form-group col-sm-12 form-inline">
+            <input type="checkbox" class="form-control" ng-model="param.isGeneric" ng-checked="param.isGeneric == 1" id="isGeneric"
+                   ng-true-value="1" ng-false-value="0">
+            <label for="isGeneric">各樓層通用</label>
         </div>
         <div class="form-group col-md-12">
             <label for="comment">備註</label>

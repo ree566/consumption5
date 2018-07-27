@@ -146,7 +146,8 @@ repositoryApp.controller("RepositoryPage", ["$scope", "$http", "ezdialog", "$fil
             name: null,
             price: null,
             spec: null,
-            supplier: null
+            supplier: null,
+            isGeneric: null
         };
 
         dialog.confirm({

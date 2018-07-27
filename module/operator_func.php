@@ -218,7 +218,7 @@ function get_order_floor_new($floor_id)
 			orders.team_id = teams.id && 
 			orders.user_id = users.id && 
 			orders.checkout_time = 0 &&
-			(items.isGeneric = 1 || items.floor_id = $floor_id)"
+			teams.floor_id = $floor_id"
     );
 }
 
@@ -336,7 +336,8 @@ function add_item($item)
 			moq = '$item->moq',
 			comment = '$item->comment',
 			low_floor = '$item->low_floor',
-			floor_id = $floor_id"
+			floor_id = $floor_id,
+            isGeneric = $item->isGeneric"
     );
 }
 
@@ -357,7 +358,8 @@ function set_item($item)
 			dimension = '$item->dimension',
 			moq = '$item->moq',
 			comment = '$item->comment',
-			low_floor = '$item->low_floor'
+			low_floor = '$item->low_floor',
+			isGeneric = $item->isGeneric
 		WHERE
 			id = $item->id"
     );
