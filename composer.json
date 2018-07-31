@@ -16,6 +16,7 @@
   },
   "require": {
     "cboden/ratchet": "v0.4.1",
-    "hutnikau/job-scheduler": "^0.4.1"
+    "hutnikau/job-scheduler": "^0.4.1",
+    "phpmailer/phpmailer": "^6.0"
   }
 }

@@ -49,7 +49,7 @@ if ($json && isset($json->command)) {
             if ($json->command == "add-new-order") {
                 $item_id = $json->item_id;
                 $number = $json->number;
-                add_new_order($item_id, $number);
+//                add_new_order($item_id, $number);
                 $out = get_order_team($SESS["team_id"]);
             }
 

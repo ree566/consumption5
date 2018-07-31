@@ -154,7 +154,8 @@ function get_user($user_id)
 			users.permission,
 			users.team_id,
 			teams.name as team_name,
-			floors.name as floor_name
+			floors.name as floor_name,
+			users.email
 		FROM
 			users, teams, floors
 		WHERE 
@@ -179,6 +180,38 @@ function get_user_all()
 		WHERE
 			users.team_id = teams.id &&
 			floors.id = teams.floor_id"
+    );
+}
+
+function get_floor_notification_user($notification_name, $floor_id)
+{
+    return get_rows(
+        "SELECT
+			users.*
+		FROM
+			users, notifications, user_notification_ref, floors, teams
+		WHERE 
+			users.id = user_notification_ref.user_id &&
+			notifications.id = user_notification_ref.notification_id &&
+			users.team_id = teams.id &&
+			teams.floor_id = floors.id &&
+			floors.id = $floor_id &&
+			notifications.name = '$notification_name'"
+    );
+}
+
+function get_floor_repository_owner($floor_id)
+{
+    return get_rows(
+        "SELECT 
+            users.*
+        FROM 
+            users, teams, floors 
+        WHERE 
+            users.team_id = teams.id &&
+            teams.floor_id = floors.id &&
+            floors.id = $floor_id &&
+            users.permission IN (3, 4)"
     );
 }
 
